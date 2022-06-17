@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(17, 17, 53);
+        margin: auto;
+        /* margin-top: 150px; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        background-color: rgb(17, 17, 53); 
+        text-align: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: skyblue;
+    }
+
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: repeat(3, 1fr) ;
+        margin-top: 100px;
+        grid-template-areas: 
+        "box1 box1 box2"
+        "box1 box1 box2"
+        "box3 box4 box4"
+        "box3 box5 box5"
+        ;   
+        justify-content: center;
+
+    }
+
+    .box1 {
+        background-color: red;
+        width: 450px;
+        height: 250px;
+        grid-area: box1;
+        margin-left: 400px;
+    }
+
+    .box2 {
+        background-color: orange;
+        width: 250px;
+        height:250px;
+        grid-area: box2;
+
+
+    }
+
+    .box3 {
+        background-color: green;
+        width: 350px;
+        height:250px;
+        grid-area: box3;
+        margin-left: 400px;
+    }
+
+    .box4 {
+        background-color: skyblue;
+        grid-area: box4;
+        width: 500px;
+    }
+
+    .box5 {
+        background-color: skyblue;
+        grid-area: box5;
+        width: 500px;
+    }
+
+    
+
+</style>
+
+<body>
+
+    <header>
+        <a href="./index.html">CSS Flexbox Layout Project</a>
+    </header>
+
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

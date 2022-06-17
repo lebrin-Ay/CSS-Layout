@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Layout</title>
+</head>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: hsl(0, 0%, 95%);
+    }
+
+    header {
+        background-color: hsl(184, 100%, 22%);
+        text-align: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: hsl(31, 77%, 52%);
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: auto;
+        margin-top: 150px;
+    }
+
+    .sedans{
+        background-color: hsl(31, 77%, 52%);
+        padding: 30px;
+        height: 450px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 300px;
+        
+    }
+
+    .suvs {
+        background-color: hsl(184, 100%, 22%);
+        padding: 30px;
+        height: 450px;
+        width: 300px;
+        
+    }
+
+    .luxury {
+        background-color: hsl(179, 100%, 13%);
+        padding: 30px;
+        height: 450px;
+        width: 300px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    p {
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 15px;
+        font-family: 'Lexend Deca', sans-serif;
+        margin-top: 30px;
+        line-height: 1.9;
+    }
+
+    h1 {
+        color: hsl(0, 0%, 95%);
+        font-family: 'Big Shoulders Display', cursive;
+        margin-top: 30px;
+    }
+
+    .sedan-btn {
+        margin-top: 50px;
+        background-color: white;
+        color: hsl(31, 77%, 52%);
+        font-size: 15px;
+        font-weight: bold;
+        border: 2px solid hsl(0, 0%, 95%);
+        padding: 10px 25px 10px 25px;
+        border-radius: 20px;
+    }
+
+    .sedan-btn:hover {
+        color: hsl(0, 0%, 95%);
+        cursor: pointer;        
+        background: transparent;
+    }
+
+    .suv-btn {
+        margin-top: 50px;
+        background-color: white;
+        color: hsl(184, 100%, 22%);
+        font-size: 15px;
+        font-weight: bold;
+        border: 2px solid hsl(0, 0%, 95%);
+        padding: 10px 25px 10px 25px;
+        border-radius: 20px;
+    }
+
+    .suv-btn:hover {
+        color: hsl(0, 0%, 95%);
+        cursor: pointer;        
+        background: transparent;
+    }
+
+    .luxury-btn {
+        margin-top: 50px;
+        background-color: white;
+        color: hsl(179, 100%, 13%);
+        font-size: 15px;
+        font-weight: bold;
+        border: 2px solid hsl(0, 0%, 95%);
+        padding: 10px 25px 10px 25px;
+        border-radius: 20px;
+    } 
+
+    .luxury-btn:hover {
+        color: hsl(0, 0%, 95%);
+        cursor: pointer;        
+        background: transparent;
+    }
+
+    @media screen and (max-width: 375px ) {
+    .container {
+        display: grid;
+        position: relative;
+    }
+
+    .sedans {
+        background-color: hsl(31, 77%, 52%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .luxury {
+        background-color: hsl(179, 100%, 13%);
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    } 
+   }
+</style>
+
+
+<body>
+
+    <header>
+        <a href="./grid.html">CSS Grid Layout Project</a>
+    </header>
+
+    <div class="container">
+
+        <div class="sedans">
+            <img src="./Images/icon-sedans.svg" alt="Sedan Car">
+            <h1>SEDANS</h1>
+            <p>Choose a sedan for its affordability and excellent fuel economy.
+                Ideal for cruising in the city or on your next road trip. 
+            </p>
+            <button class="sedan-btn">
+                Learn More
+            </button>
+        </div>
+
+        <div class="suvs">
+            <img src="./Images/icon-suvs.svg" alt="Suvs cars">
+            <h1>SUVS</h1>
+            <p>Take an SUV for its spacious interior, power, and versatility.
+                Perfect for your next family vacation and off-road adventures.
+            </p>
+            <button class="suv-btn">
+                Learn More
+            </button>
+        </div>
+
+        <div class="luxury">
+            <img src="./Images/icon-luxury.svg" alt="Luxury Car">
+            <h1>LUXURY</h1>
+            <p>Cruise in the best car brands without the bloated prices. <br> Enjoy the 
+                enhanced comfort of <br> a luxury rental and arrive in style.
+            </p>
+            <button class="luxury-btn">
+                Learn More 
+            </button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
